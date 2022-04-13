@@ -38,4 +38,14 @@
         app:layout_constraintStart_toStartOf="@+id/txtResultado"
         app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
 
+    <TextView
+        android:id="@+id/txtPalindromo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="372dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnProcesar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnProcesar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

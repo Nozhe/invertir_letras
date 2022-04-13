@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     //atributos-variables
-    private TextView txtResultado;
+    private TextView txtResultado,txtPalindromo;
     private EditText etPalabra;
     private Button btnProcesar;
 
@@ -50,11 +50,21 @@ public class MainActivity extends AppCompatActivity {
         //Netamente codigo java
         //palabra = new StringBuilder(palabra).reverse().toString();
         // el metodo se llama .catyAt(indice)
-        String invertido ="Adios";
+        String invertido ="";
+
         for (int i = this.palabra.length() -1 ; i >=0; i--) {
             invertido += this.palabra.charAt(i);
         }
         txtResultado.setText(invertido);
+        String resultado= invertido;
+        if (resultado.equals(palabra)){
+            txtPalindromo.setText("ES PALINDROMO");
+        }
+        else {
+            txtPalindromo.setText("NO ES PALINDROMO");
+        }
+
+
     }
 
     private void recibirInformacion() {
@@ -63,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void inicializarVistas() {
         txtResultado = findViewById(R.id.txtResultado);
+        txtPalindromo = findViewById(R.id.txtPalindromo);
         etPalabra = findViewById(R.id.etPalabra);
         etPalabra = findViewById(R.id.etPalabra);
         btnProcesar = findViewById(R.id.btnProcesar);

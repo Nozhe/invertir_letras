@@ -48,8 +48,13 @@ public class MainActivity extends AppCompatActivity {
     private void invertirPalabra() {
         //Una anera directa de inveritr una cadena
         //Netamente codigo java
-        palabra = new StringBuilder(palabra).reverse().toString();
-        txtResultado.setText(palabra);
+        //palabra = new StringBuilder(palabra).reverse().toString();
+        // el metodo se llama .catyAt(indice)
+        String invertido ="Adios";
+        for (int i = this.palabra.length() -1 ; i >=0; i--) {
+            invertido += this.palabra.charAt(i);
+        }
+        txtResultado.setText(invertido);
     }
 
     private void recibirInformacion() {
